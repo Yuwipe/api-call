@@ -1,12 +1,10 @@
 const waifuImage = document.getElementById('waifu-image');
 const nextBtn = document.getElementById('next-btn');
 const errorMessage = document.getElementById('error-message');
-const spinner = document.getElementById('spinner'); // Get spinner element
 
 // Fetch a random waifu image
 async function fetchWaifuImage() {
   try {
-    spinner.style.display = 'block'; // Show the spinner
     const response = await fetch('https://api.waifu.pics/sfw/waifu');
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`);
@@ -17,8 +15,6 @@ async function fetchWaifuImage() {
     errorMessage.textContent = ''; // Clear any previous errors
   } catch (error) {
     errorMessage.textContent = `Failed to load image: ${error.message}`;
-  } finally {
-    spinner.style.display = 'none'; // Hide the spinner after loading
   }
 }
 
