@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Waifu Image Viewer</title>
+  <title>Waifu & Neko Viewer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Random Waifu Viewer 🌸</h1>
-    <img id="waifu-image" src="" alt="Random Waifu" />
-    <button id="next-btn">Next Waifu</button>
+    <h1>Waifu & Neko Image Viewer 🌸</h1>
+
+    <select id="api-select">
+      <option value="waifu">Waifu</option>
+      <option value="neko">Neko</option>
+    </select>
+
+    <div class="image-container">
+      <img id="image" src="" alt="Random Image" />
+      <div id="spinner" class="spinner"></div>
+    </div>
+
+    <button id="next-btn">Next Image</button>
     <p id="error-message"></p>
   </div>
 
